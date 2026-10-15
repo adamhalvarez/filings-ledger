@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.vercel/
+.env
+.env.local
+.env*.local
+npm-debug.log*
+.DS_Store
+
+# Written by "npx tsc --noEmit" because tsconfig.json sets incremental.
+# Never useful to commit and never useful to a build.
+*.tsbuildinfo

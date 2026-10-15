@@ -1,0 +1,369 @@
+:root {
+  color-scheme: light;
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --line: #d8d8d8;
+  --bg: #ffffff;
+  --bg-alt: #f6f6f4;
+  --accent: #7a1f1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  border-bottom: 2px solid var(--ink);
+}
+
+.site-header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-header nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  margin-top: 0;
+}
+
+.refreshed {
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  background: var(--bg-alt);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 2rem;
+}
+
+table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th {
+  border-bottom: 2px solid var(--ink);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.badge-live {
+  border-color: #2b6b3f;
+  color: #2b6b3f;
+}
+
+.badge-legacy {
+  border-color: #8a6b1f;
+  color: #8a6b1f;
+}
+
+.badge-historical {
+  border-color: #1f6b8a;
+  color: #1f6b8a;
+}
+
+.badge-cdx {
+  border-color: #5a5a8a;
+  color: #5a5a8a;
+}
+
+.badge-spn2 {
+  border-color: #2b6b3f;
+  color: #2b6b3f;
+}
+
+.badge-unmatched {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.entity-directory {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1.5rem;
+  font-family: system-ui, sans-serif;
+}
+
+.entity-directory li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.muted-count {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.filter-bar {
+  font-family: system-ui, sans-serif;
+  margin: 1rem 0;
+}
+
+.filter-bar input {
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.methodology section {
+  margin-bottom: 1.75rem;
+}
+
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Added 2026-09-09 with the change ledger, the action counts, the citation
+   line and the search page. Colours reuse the three already in use above,
+   green for what this system saw itself, blue for something learned after
+   the fact, the accent red for anything unresolved, so a reader who has
+   learned the badges on the filings pages does not have to learn a second
+   vocabulary on the front page. */
+
+.delta-up {
+  color: #2b6b3f;
+  white-space: nowrap;
+}
+
+.delta-down {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* One recorded action, so the amount is not cumulative: the strongest thing
+   this site can now say about a contract figure, and green for the same
+   reason live ingest is. */
+.badge-single-action {
+  border-color: #2b6b3f;
+  color: #2b6b3f;
+}
+
+/* More than one action. Not a warning, a qualification: the number is real
+   and it is a lifetime total. */
+.badge-multi-action {
+  border-color: #1f6b8a;
+  color: #1f6b8a;
+}
+
+.cite-line {
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.cite-line code,
+.cite {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: var(--bg-alt);
+  padding: 0 0.2rem;
+  border-radius: 2px;
+}
+
+.cite {
+  font-size: 0.85rem;
+}
+
+/* A row linked to by its own anchor. Without this a permalink lands the
+   reader on a page of hundreds of near identical rows with no indication
+   which one they came for, which makes the anchor close to useless even
+   though it worked. */
+tbody tr:target {
+  background: #fff6d8;
+}
+
+.period-nav {
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 0.5rem 0;
+}
+
+/* Added 2026-09-10 with the confluence revision. A lede is the one line
+   definition a table sits under, in body type rather than the muted
+   subtitle, since it is the claim and not a caveat. .notes holds the
+   caveats, which moved below the tables. */
+.lede {
+  font-size: 1.05rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.notes {
+  font-family: system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: var(--ink);
+  max-width: 44rem;
+}
+
+/* Not measured yet: dashed, in the muted ink, so it reads as a state of
+   this system's knowledge rather than a property of the award. */
+.badge-unmeasured {
+  border-style: dashed;
+}
+
+/* Added 2026-09-11: the watchlist's window and baseline pair, and the per
+   filing permalink page. */
+.pair {
+  white-space: nowrap;
+}
+
+.pair-sep {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.cell-p {
+  margin: 0 0 0.35rem;
+}
+
+.breadcrumb {
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.filing-title {
+  font-size: 1.5rem;
+}
+
+.cite-block {
+  font-family: system-ui, sans-serif;
+  font-size: 0.88rem;
+  border: 1px solid var(--line);
+  background: var(--bg-alt);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  overflow-wrap: anywhere;
+}
+
+.cite-block > div {
+  margin: 0.2rem 0;
+}
+
+.cite-label {
+  display: inline-block;
+  min-width: 7.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+table.narrow {
+  min-width: 0;
+  width: auto;
+}
+
+.why-watched {
+  font-size: 1.02rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.filter-bar select {
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
